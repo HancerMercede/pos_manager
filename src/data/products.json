@@ -1,0 +1,58 @@
+ [
+  {
+    "id": 1,
+     "Name":"Lenovo Legion 5",
+     "description":"Gaming Laptop",
+     "Price":1000.00,
+     "cuantity":20
+  },
+  {
+    "id": 1,
+     "Name":"Acer Predator",
+     "description":"Gaming Laptop",
+     "Price":1300.00,
+     "cuantity":15
+  },
+  
+  {
+    "id": 1,
+     "Name":"Aienware",
+     "description":"Gaming Laptop",
+     "Price":1350.00,
+     "cuantity":5
+  },
+  
+  {
+    "id": 1,
+     "Name":"Case cooler master",
+     "description":"Case",
+     "Price":650.00,
+     "cuantity":10
+  },
+  
+  {
+    "id": 1,
+     "Name":"Lenovo Legion 5",
+     "description":"Gaming Laptop",
+     "Price":1000.00,
+     "cuantity":55
+  },
+  
+  {
+    "id": 1,
+     "Name":"Logitech xt450",
+     "description":"Gaming Mouse",
+     "Price":450.00,
+     "cuantity":5
+  },
+  
+  {
+    "id": 1,
+     "Name":"Corsair K90",
+     "description":"Gaming keyboard",
+     "Price":800.00,
+     "cuantity":5
+  }  
+]
+
+

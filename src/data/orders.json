@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "Customer":"Juan Peralta",
+        "Amount":45000.00,
+        "Date":"12-12-2023"
+    },
+    {
+        "id":2,
+        "Customer":"Christopher Morales",
+        "Amount":5000.00,
+        "Date":"10-7-2023"
+    },
+    {
+        "id":3,
+        "Customer":"Hancer Mercede Sánchez",
+        "Amount":55000.00,
+        "Date":"10-10-2023"
+    }
+]
