@@ -70,8 +70,10 @@
         position: relative;
     }
 
-    .sidebar a {
+    .linksection {
         float: left;
+        display: flex;
+        justify-content: space-around;
     }
 
     .footer {
@@ -80,9 +82,8 @@
 }
 
 @media screen and (max-width: 400px) {
-    .sidebar a {
+    .linksection {
         text-align: center;
         float: none;
-
     }
 }

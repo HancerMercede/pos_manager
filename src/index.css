@@ -37,5 +37,8 @@ body {
     position: relative;
     margin-left: 0;
     padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-area: 'body';
   }
 }

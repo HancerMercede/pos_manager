@@ -15,10 +15,15 @@ export const Sidebar = () => {
     <>
       <div className={style.sidebar}>
         <header className={style.header}>
-          <img src="./public/images/avatar.png" width={35} height={35}></img>
+          <img
+            src="./src/images/avatar.png"
+            alt="profile"
+            width={35}
+            height={35}
+          ></img>
           <p>{username}</p>
         </header>
-        <div>
+        <div className={style.linksection}>
           <Link to={"/"}>
             <IoMdHome size={20} />
             Home
