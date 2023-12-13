@@ -1,0 +1,238 @@
+.main_content_dashboard {
+    background-color: #EAEDED;
+    border-radius: 10px;
+    padding: 15px 15px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.card_container {
+    background: #EAEDED;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.card_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main_title {
+    color: #212F3D;
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin: 0 20px;
+}
+
+.dashboard_title {
+    color: #2C3E50;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.amount {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.title {
+    font-size: 12px;
+    font-weight: 200px;
+}
+
+.amount_value {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+.icon {
+    color: #fff;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.card_details {
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    padding: 10px;
+}
+
+.amountcard {
+    background-color: #A3E4D7;
+    width: 290px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.salescard {
+    background-color: #AED6F1;
+    width: 290px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.inventorycard {
+    background-color: #D2B4DE;
+    width: 290px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.customercard {
+    background-color: #F1948A;
+    width: 290px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.payment_proceed_card {
+    background-color: #F9E79F;
+    width: 290px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.amountcard:hover {
+    transform: translateY(-5PX);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.salescard:hover {
+    transform: translateY(-5PX);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.inventorycard:hover {
+    transform: translateY(-5PX);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.customercard:hover {
+    transform: translateY(-5PX);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.payment_proceed_card:hover {
+    transform: translateY(-5PX);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.date_container {
+    background: #A3E4D7;
+    padding: 5px 8px;
+    border-radius: 10px;
+    color: #212F3D;
+}
+
+.light_yellow {
+    background-color: #F1C40F;
+}
+
+.light_red {
+    background-color: #CB4335;
+}
+
+.light_green {
+    background-color: #27AE60;
+}
+
+.light_violet {
+    background-color: #7D3C98;
+}
+
+.light_blue {
+    background-color: #3498DB;
+}
+
+/* Finance information */
+
+.finance_container {
+    background: #EAEDED;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.finance_title {
+    padding: 10px 0;
+}
+
+.table_container {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+thead {
+    background: #B03A2E;
+    border-radius: 5px;
+
+}
+
+.th {
+    color: #fff;
+    padding: 10px;
+}
+
+tbody {
+    background: #FDFEFE;
+}
+
+.td {
+    padding: 10px;
+    font-size: 14px;
+    color: #212F3D;
+}
+
+.tr:nth-child(even) {
+    background: #F2F3F4;
+}
+
+tfoot {
+    background: #B03A2E;
+    font-weight: bold;
+    color: #fff;
+}
+
+tfoot td {
+    padding: 10px;
+}

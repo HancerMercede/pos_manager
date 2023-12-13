@@ -26,7 +26,7 @@ export const Sidebar = () => {
         <div className={style.linksection}>
           <Link to={"/"}>
             <IoMdHome size={20} />
-            Home
+            Dashboard
           </Link>
           <Link to={"/Customers"}>
             <FaUsers size={20} />
