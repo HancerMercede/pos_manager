@@ -3,13 +3,9 @@ import products from "../data/products.json";
 import style from "./Product.module.css";
 import { LuClipboardEdit } from "react-icons/lu";
 import tablestyle from "../CustomStyles/Table.module.css";
+import { DollarFormat } from "../utils/DollarFormat";
 
 export const Product = () => {
-  let DollarFormat = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-  });
-
   return (
     <>
       <div className={style.container}>

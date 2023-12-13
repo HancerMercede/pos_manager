@@ -30,5 +30,13 @@
         "Description":"Gaming Laptop",
         "Category":	"Techonology",
         "Status":"Pending Approval"	,"Total": 3500.00
+      },
+      {
+        "id":"80613bc4-8462-4a62-bf9f-272781e49e4r",
+        "date":"12/12/2023",
+        "Transaction Type":"Credit",
+        "Description":"Memory Ram",
+        "Category":	"Techonology",
+        "Status":"Pending Approval"	,"Total": 2000.00
       }
 ]

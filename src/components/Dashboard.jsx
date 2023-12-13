@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { FaDollarSign } from "react-icons/fa";
 import { FaList } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
@@ -6,25 +5,21 @@ import { FaUsers } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
 import style from "./Dashboard.module.css";
 import data from "../data/finance.json";
+import { Clock } from "./Clock";
+import { DollarFormat } from "../utils/DollarFormat";
 
 export const Dashboard = () => {
-  // Here I get the current state of the timeline.
-  const [date, setDate] = useState(new Date().toLocaleString());
-
-  useEffect(() => {
-    let secTimer = setInterval(() => {
-      setDate(new Date().toLocaleString());
-    }, 1000);
-
-    return () => clearInterval(secTimer);
-  }, []);
+  let total = 0;
+  data.forEach((num) => {
+    total += num.Total;
+  });
 
   return (
     <>
       <div className={style.main_content_dashboard}>
         <p className={style.dashboard_title}>Dashboard</p>
         <div className={style.date_container}>
-          <p>{date}</p>
+          <Clock />
         </div>
       </div>
       <div className={style.card_container}>
@@ -116,14 +111,16 @@ export const Dashboard = () => {
                     <td className={style.td}>{item.Description}</td>
                     <td className={style.td}>{item.Category}</td>
                     <td className={style.td}>{item.Status}</td>
-                    <td className={style.td}>{item.Total}</td>
+                    <td className={style.td}>
+                      {DollarFormat.format(item.Total)}
+                    </td>
                   </tr>
                 );
               })}
             </tbody>
             <tfoot>
               <tr>
-                <td colSpan={7}>Total:$ 9300.00</td>
+                <td colSpan={7}>Total:${total}</td>
               </tr>
             </tfoot>
           </table>
