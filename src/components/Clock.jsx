@@ -6,7 +6,7 @@ export const Clock = () => {
 
   useEffect(() => {
     let secTimer = setInterval(() => {
-      setDate(new Date().toLocaleString());
+      setDate(new Date().toLocaleString([], { hour12: true }));
     }, 1000);
 
     return () => clearInterval(secTimer);

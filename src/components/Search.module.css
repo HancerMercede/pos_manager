@@ -1,10 +1,29 @@
+.search_wrapper {
+    position: relative;
+}
+
 .input {
+    margin: 12px 0;
     width: 100%;
+    padding: 8px 8px 8px 25px;
     border: none;
     background-color: #FDFEFE;
-    padding: 8px;
     outline: none;
     border-radius: 5px;
-    margin: 12px 0;
     font-size: 15px;
+}
+
+.searchButton {
+    position: absolute;
+    border-radius: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.searchButton {
+    padding: 0 0 0 5px;
 }

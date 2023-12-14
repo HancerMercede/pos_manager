@@ -223,8 +223,16 @@ tbody {
     color: #212F3D;
 }
 
+.tr:hover {
+    background: #F2D7D5;
+}
+
 .tr:nth-child(even) {
     background: #F2F3F4;
+}
+
+.tr:nth-child(even):hover {
+    background: #F2D7D5;
 }
 
 tfoot {
