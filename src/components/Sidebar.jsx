@@ -6,6 +6,7 @@ import { GiCash } from "react-icons/gi";
 import { VscSettingsGear } from "react-icons/vsc";
 import { IoMdHome } from "react-icons/io";
 import { VscGraph } from "react-icons/vsc";
+import { MdLogout } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const username = "Christopher Martinez";
@@ -48,10 +49,14 @@ export const Sidebar = () => {
             <VscGraph size={20} />
             Earnings
           </Link>
+          <Link to={"/Earnings"}>
+            <VscSettingsGear size={20} />
+            Settings
+          </Link>
         </div>
         <footer className={style.footer}>
-          <VscSettingsGear />
-          Administrator
+          <MdLogout size={20} />
+          Log out
         </footer>
       </div>
     </>

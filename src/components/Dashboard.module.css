@@ -236,11 +236,13 @@ tbody {
 }
 
 tfoot {
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
     background: #B03A2E;
-    font-weight: bold;
     color: #fff;
 }
 
 tfoot td {
+
     padding: 10px;
 }

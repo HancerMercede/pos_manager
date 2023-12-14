@@ -54,6 +54,13 @@
     color: #2C3E50;
 }
 
+footer:hover {
+    background-color: #D5D8DC;
+    transition: 0.5s ease;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 5px;
+}
 
 .linksection a:hover:not(.active) {
     background-color: #D5D8DC;
