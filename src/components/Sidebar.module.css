@@ -27,13 +27,17 @@
     background-color: #943126;
 }
 
+.linksection {
+    padding: 8px;
+}
+
 .linksection a {
     display: flex;
     align-items: center;
     gap: 5px;
     height: 100%;
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     box-sizing: border-box;
     margin-top: 25px;
     line-height: 5px;
@@ -48,7 +52,7 @@
     position: absolute;
     width: 100%;
     display: flex;
-    padding: 15px;
+    padding: 10px;
     gap: 5px;
     align-items: center;
     color: #2C3E50;
