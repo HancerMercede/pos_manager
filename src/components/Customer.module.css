@@ -5,7 +5,6 @@
 
 
 .container {
-    margin-top: 50px;
     background: #EAEDED;
     padding: 2rem;
     border-radius: 10px;
@@ -57,4 +56,18 @@ tbody {
 
 .tr:nth-child(even):hover {
     background: #F2D7D5;
+}
+
+.button_primary {
+    color: #fff;
+    background: #3498DB;
+    padding: 8px 12px;
+    border: 1px solid #3498DB;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+}
+
+.button_primary:hover {
+    background: #1E5BD6;
 }

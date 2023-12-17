@@ -38,7 +38,7 @@ body {
     margin-left: 0;
     padding-left: 0;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
     grid-area: 'body';
   }
 }

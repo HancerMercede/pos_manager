@@ -1,0 +1,120 @@
+.container {
+    background: #EAEDED;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.customer_form {
+    background: #AEB6BF;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.custoemr_label {
+    background-color: #F2D7D5;
+    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+    padding: 5px 0;
+    margin: 0 0 10px 0;
+}
+
+.customer_form input {
+    padding: 5px 0 8px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    width: 200px;
+}
+
+.btn {
+    background: #EC7063;
+    padding: 10px 10px;
+    margin: 5px 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #CD6155;
+}
+
+/* Product information */
+
+.product_container {
+    background: #EAEDED;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.product_form {
+    background: #AEB6BF;
+    padding: 15px 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.product_form input {
+    padding: 10px 0 8px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.btn_add {
+    background-color: #3498DB;
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin: 5px 0;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn_add:hover {
+    background-color: #2E86C1;
+}
+
+.btn_clean {
+    background-color: #BDC3C7;
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin: 5px 0;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.product_grid_container {
+    background: #EAEDED;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}

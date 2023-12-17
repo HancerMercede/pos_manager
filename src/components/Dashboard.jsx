@@ -23,7 +23,7 @@ export const Dashboard = () => {
         </div>
       </div>
       <div className={style.card_container}>
-        <h1 className={style.main_title}>Current information</h1>
+        <p className={style.main_title}>Current information</p>
         <div className={style.card_wrapper}>
           <div className={style.amountcard}>
             <div className={style.card_header}>

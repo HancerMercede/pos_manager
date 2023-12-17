@@ -9,7 +9,7 @@ export const CustomerTableDetails = ({ customer }) => {
       <td className={style.td}>{customer.address}</td>
       <td className={style.td}>{customer.Phone}</td>
       <td className={style.td}>
-        <button className="button is-info is-small">
+        <button className={style.button_primary}>
           <LuClipboardEdit size={15} />
         </button>
       </td>

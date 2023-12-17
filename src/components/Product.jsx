@@ -35,7 +35,7 @@ export const Product = () => {
                     </td>
                     <td className={tablestyle.td}>{item.cuantity}</td>
                     <td className={tablestyle.td}>
-                      <button className="button is-info is-small">
+                      <button className={tablestyle.button_primary}>
                         <LuClipboardEdit size={15} />
                       </button>
                     </td>

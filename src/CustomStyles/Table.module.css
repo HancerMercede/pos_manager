@@ -5,13 +5,11 @@
 table {
     width: 100%;
     border-collapse: collapse;
-
 }
 
 thead {
     background: #B03A2E;
     border-radius: 5px;
-
 }
 
 .th {
@@ -49,4 +47,72 @@ tfoot {
 
 tfoot td {
     padding: 10px;
+}
+
+.thead_grey {
+    background: #AEB6BF;
+}
+
+.thead_primary {
+    background: #3498DB;
+}
+
+.button_primary {
+    color: #fff;
+    background: #3498DB;
+    padding: 8px 12px;
+    border: 1px solid #3498DB;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+}
+
+.button_primary:hover {
+    background: #1E5BD6;
+}
+
+.button_danger {
+    color: #fff;
+    background: #EC7063;
+    padding: 8px 12px;
+    border: 1px solid #EC7063;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+}
+
+.button_danger:hover {
+    background: #C0392B;
+}
+
+.button_warning {
+    color: #fff;
+    background: #F4D03F;
+    padding: 8px 12px;
+    border: 1px solid #F4D03F;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+}
+
+.button_success {
+    color: #fff;
+    background: #52BE80;
+    padding: 8px 12px;
+    border: 1px solid #52BE80;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+}
+
+.button_success:hover {
+    background: #229954;
+}
+
+.button_wrapper {
+    display: flex;
+    justify-content: start;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
 }

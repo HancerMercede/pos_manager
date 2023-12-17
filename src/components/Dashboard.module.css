@@ -23,10 +23,12 @@
 }
 
 .main_title {
-    color: #212F3D;
-    font-size: 20px;
-    padding-bottom: 10px;
-    margin: 0 20px;
+    background: #F2D7D5;
+    width: 180px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+    margin: 0 0 5px 10px;
 }
 
 .dashboard_title {
@@ -128,27 +130,27 @@
 }
 
 .amountcard:hover {
-    transform: translateY(-5PX);
+    transform: translateY(-5px);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .salescard:hover {
-    transform: translateY(-5PX);
+    transform: translateY(-5px);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .inventorycard:hover {
-    transform: translateY(-5PX);
+    transform: translateY(-5px);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .customercard:hover {
-    transform: translateY(-5PX);
+    transform: translateY(-5px);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .payment_proceed_card:hover {
-    transform: translateY(-5PX);
+    transform: translateY(-5px);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -189,7 +191,12 @@
 }
 
 .finance_title {
-    padding: 10px 0;
+    background: #F2D7D5;
+    width: 180px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+    margin: 0 0 10px 0;
 }
 
 .table_container {
@@ -243,6 +250,5 @@ tfoot {
 }
 
 tfoot td {
-
     padding: 10px;
 }
