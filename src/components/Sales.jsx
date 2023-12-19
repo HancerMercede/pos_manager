@@ -9,20 +9,24 @@ import { AutoCalculateColumn } from "../utils/AutoCalculate";
 import { DollarFormat } from "../utils/DollarFormat";
 
 export const Sales = () => {
+  // customer states
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [RNC, setRNC] = useState("");
   const [DNI, setDNI] = useState("");
 
-  // products
+  // products states
   const [products, setProducts] = useState([]);
 
   const addProduct = (product) => {
     if (product.productId === "" || product.productId === undefined) return;
+
     setProducts([...products, product]);
     onClear();
   };
+
+  // Remove a product  from the list or better say build a new array with all the items minus the one we are sending.
   const removeProduct = (productId) => {
     setProducts(products.filter((product) => product.productId !== productId));
   };
@@ -39,7 +43,6 @@ export const Sales = () => {
   const [total, setTotal] = useState();
 
   const OnDelete = (env) => {
-    console.log("entre aqui");
     env.preventDefault();
     setName("");
     setEmail("");
@@ -56,7 +59,14 @@ export const Sales = () => {
     setSubtotal();
     setTotal();
   };
-  const globalTotal = AutoCalculateColumn(products);
+  // Here i made a sum for all the total, to have a global value.
+  let globalTotal = 0;
+  products.forEach((product) => {
+    let total = 0;
+    globalTotal += product.total;
+    console.log(total);
+  });
+
   return (
     <>
       <div className={style.container}>

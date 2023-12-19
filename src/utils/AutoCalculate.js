@@ -1,7 +1,8 @@
-export const AutoCalculateColumn = ({ records = [] }) => {
+export const AutoCalculateColumn = ({ products }) => {
   let total = 0;
-  records.forEach((num) => {
+  products.forEach((num) => {
     total += num.Total;
+    console.log(total);
   });
   return total;
 };

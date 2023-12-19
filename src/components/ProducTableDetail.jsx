@@ -2,6 +2,7 @@ import { LuClipboardEdit } from "react-icons/lu";
 import tablestyle from "../CustomStyles/Table.module.css";
 import { CiTrash } from "react-icons/ci";
 import { DollarFormat } from "../utils/DollarFormat";
+import PropTypes from "prop-types";
 
 export const ProducTableDetail = ({ product, removeProduct }) => {
   return (
@@ -28,4 +29,9 @@ export const ProducTableDetail = ({ product, removeProduct }) => {
       </td>
     </tr>
   );
+};
+
+ProducTableDetail.propTypes = {
+  product: PropTypes.object.isRequired,
+  removeProduct: PropTypes.func.isRequired,
 };
