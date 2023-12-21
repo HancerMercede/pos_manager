@@ -107,7 +107,7 @@ export const Dashboard = () => {
                 return (
                   <tr key={item.id} className={style.tr}>
                     <td className={style.td}>{item.date}</td>
-                    <td className={style.td}>{item.Status}</td>
+                    <td className={style.td}>{item["Transaction Type"]}</td>
                     <td className={style.td}>{item.Description}</td>
                     <td className={style.td}>{item.Category}</td>
                     <td className={style.td}>{item.Status}</td>

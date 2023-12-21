@@ -7,6 +7,85 @@ import { useEffect, useState } from "react";
 import { ProducTableDetail } from "./ProducTableDetail";
 import { DollarFormat } from "../utils/DollarFormat";
 
+const customers = [
+  {
+    id: "1",
+    Name: "Jhon Doe",
+    Email: "jhon.doe@gmail.com",
+    phoneNumber: "123-456-7890",
+    RNC: "123-456-7890",
+    DNI: "123-456-7890",
+  },
+  {
+    id: "2",
+    Name: "Jhon Walker",
+    Email: "jhon.Walker@gmail.com",
+    phoneNumber: "123-456-7890",
+    RNC: "123-456-7890",
+    DNI: "123-456-7890",
+  },
+  {
+    id: "3",
+    Name: "Jhon Cena",
+    Email: "jhon.Cena@gmail.com",
+    phoneNumber: "",
+    RNC: "123-456-7890",
+    DNI: "123-456-7890",
+  },
+  {
+    id: "4",
+    Name: "Jhon Preston",
+    Email: "jhon.Preston@gmail.com",
+    phoneNumber: "123-456-7890",
+    RNC: "123-456-7890",
+    DNI: "038-0018771-2",
+  },
+  {
+    id: "5",
+    Name: "Jhon Wick",
+    Email: "jhon.Wick@gmail.com",
+    phoneNumber: "809-968-0742",
+    RNC: "123-456-7890",
+    DNI: "123-456-7890",
+  },
+  {
+    id: "6",
+    Name: "Hancer Mercede",
+    Email: "Han.msanchez@gmail.com",
+    phoneNumber: "809-968-0742",
+    RNC: "007-008-7890",
+    DNI: "048-018742-3",
+  },
+];
+
+const productsInStock = [
+  {
+    productId: "001",
+    Description: "React.js ultimate course",
+    Price: 65,
+  },
+  {
+    productId: "002",
+    Description: "Node.js ultimate course",
+    Price: 70,
+  },
+  {
+    productId: "003",
+    Description: "MongoDB 2024 Edition",
+    Price: 60,
+  },
+
+  {
+    productId: "004",
+    Description: "MySql: learn the fundamental",
+    Price: 68.5,
+  },
+  {
+    productId: "005",
+    Description: "Dokcer: The game changer",
+    Price: 60.5,
+  },
+];
 export const Sales = () => {
   // customer states
   const [name, setName] = useState("");
@@ -49,6 +128,7 @@ export const Sales = () => {
 
   // Here i added the edited product to the list again.
   const AddEditedProduct = (product) => {
+    // Binding the new state of the 3 properties and saved it.
     product.quantity = editQuantity;
     product.subtotal = editSubtotal;
     product.total = editTotal;
@@ -81,12 +161,44 @@ export const Sales = () => {
     const newValue = subtotal + tax;
     setTotal(newValue);
   }, [subtotal]);
+
   // Here i triggered an effect to calculate the new total when the sub-total is editted.
   useEffect(() => {
     const tax = editSubtotal * 0.18;
     const newValue = editSubtotal + tax;
     setEditTotal(newValue);
   }, [editSubtotal]);
+
+  const handleComboChange = (ev) => {
+    const _name = ev.target.value;
+    const customer = customers.filter((c) => c.Name === _name);
+
+    customer.forEach((c) => {
+      setName(c.Name);
+      setEmail(c.Email);
+      setPhone(c.phoneNumber);
+      setRNC(c.RNC);
+      setDNI(c.DNI);
+    });
+  };
+
+  const handleFindProductChange = (ev) => {
+    const _search = ev.target.value;
+
+    const product = productsInStock.filter(
+      (p) => p.productId === _search || p.Description.includes(_search)
+    );
+
+    if (_search === "" || product.length === 0) {
+      return onClear();
+    }
+
+    product.forEach((p) => {
+      setProductId(p.productId);
+      setDescription(p.Description);
+      setPrice(p.Price);
+    });
+  };
 
   const OnDelete = (env) => {
     env.preventDefault();
@@ -108,6 +220,7 @@ export const Sales = () => {
     setEditquantity(0);
     setEditSubtotal(0);
     setEditTotal(0);
+
     setEdittingProducts(null);
   };
 
@@ -122,42 +235,45 @@ export const Sales = () => {
       <div className={style.container}>
         <p className={style.custoemr_label}>Customer information</p>
         <form className={style.customer_form}>
-          <input
-            type="text"
-            placeholder="Name"
+          <select
             value={name}
-            onChange={(ev) => setName(ev.target.value)}
-          />
+            defaultValue="select one..."
+            onChange={handleComboChange}
+            className={style.select_combo}
+          >
+            {customers.map((c) => (
+              <option value={c.Name} key={c.id}>
+                {c.id.concat(" - ", c.Name)}
+              </option>
+            ))}
+          </select>
+          <input type="text" placeholder="Name" value={name} readOnly={true} />
           <input
             type="text"
             placeholder="Email"
             value={email}
-            onChange={(env) => setEmail(env.target.value)}
+            readOnly={true}
           />
           <input
             type="text"
             placeholder="Phone"
             value={phone}
-            onChange={(env) => setPhone(env.target.value)}
+            readOnly={true}
           />
-          <input
-            type="text"
-            placeholder="RNC"
-            value={RNC}
-            onChange={(env) => setRNC(env.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="DNI"
-            value={DNI}
-            onChange={(env) => setDNI(env.target.value)}
-          />
+          <input type="text" placeholder="RNC" value={RNC} readOnly={true} />
+          <input type="text" placeholder="DNI" value={DNI} readOnly={true} />
         </form>
         <button className={style.btn} onClick={OnDelete}>
           <CiTrash size={20} /> Delete
         </button>
       </div>
       <div className={style.product_container}>
+        <input
+          type="text"
+          placeholder="Product search..."
+          onChange={handleFindProductChange}
+          className={style.product_search}
+        />
         {edittingProducts ? (
           <>
             <form className={style.product_form}>
