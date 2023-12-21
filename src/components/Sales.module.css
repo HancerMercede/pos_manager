@@ -37,7 +37,7 @@
 }
 
 .btn {
-    background: #EC7063;
+    background: linear-gradient(to left, #ee9a9a, #c94e41);
     padding: 10px 10px;
     margin: 5px 0;
     display: flex;
@@ -49,17 +49,20 @@
     border-radius: 5px;
     cursor: pointer;
     border: none;
+    transition: all 0s ease;
 }
 
 .btn:hover {
     background-color: #CD6155;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
 }
 
 /* Product information */
 
 .product_container {
     background: #EAEDED;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
 }
 
@@ -82,7 +85,7 @@
 }
 
 .btn_add {
-    background-color: #3498DB;
+    background: linear-gradient(to left, #9ac5e3, #315dd4);
     color: #fff;
     padding: 10px 10px;
     border: none;
@@ -94,14 +97,17 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all 0s ease;
 }
 
 .btn_add:hover {
     background-color: #2E86C1;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
 }
 
 .btn_clean {
-    background-color: #BDC3C7;
+    background: linear-gradient(to left, #BDC3C7, #565657);
     color: #fff;
     padding: 10px 10px;
     border: none;
@@ -113,6 +119,12 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.btn_clean:hover {
+    background-color: #BDC3C7;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
 }
 
 .product_grid_container {
@@ -135,7 +147,7 @@
 .product_search {
     border: none;
     outline: none;
-    padding: 10px 5px 5px 5px;
+    padding: 10px 5px 10px 10px;
     border-radius: 5px;
     width: 250px;
     margin: 0 0 10px 0;

@@ -184,7 +184,6 @@ export const Sales = () => {
 
   const handleFindProductChange = (ev) => {
     const _search = ev.target.value;
-
     const product = productsInStock.filter(
       (p) => p.productId === _search || p.Description.includes(_search)
     );
