@@ -1,11 +1,12 @@
 import style from "./Sales.module.css";
 import { CiTrash } from "react-icons/ci";
-import { MdAddShoppingCart } from "react-icons/md";
-import { MdOutlineCleaningServices } from "react-icons/md";
+import { FaPlus } from "react-icons/fa";
+import { LuEraser } from "react-icons/lu";
 import tablestyle from "../CustomStyles/Table.module.css";
 import { useEffect, useState } from "react";
 import { ProducTableDetail } from "./ProducTableDetail";
 import { DollarFormat } from "../utils/DollarFormat";
+import { CiShoppingCart } from "react-icons/ci";
 
 const customers = [
   {
@@ -86,6 +87,11 @@ const productsInStock = [
     Price: 60.5,
   },
 ];
+const tax = [
+  { id: 1, value: 0.18 },
+  { id: 2, value: 0.16 },
+];
+
 export const Sales = () => {
   // customer states
   const [name, setName] = useState("");
@@ -232,47 +238,67 @@ export const Sales = () => {
   return (
     <>
       <div className={style.container}>
-        <p className={style.custoemr_label}>Customer information</p>
-        <form className={style.customer_form}>
+        <div className={style.customer_header_section}>
+          <p className={style.custoemr_label}>Customer information</p>
           <select
+            label="Select a customer"
             value={name}
             defaultValue="select one..."
             onChange={handleComboChange}
             className={style.select_combo}
           >
+            <option value="" selected>
+              0 - Select one...
+            </option>
             {customers.map((c) => (
               <option value={c.Name} key={c.id}>
                 {c.id.concat(" - ", c.Name)}
               </option>
             ))}
           </select>
-          <input type="text" placeholder="Name" value={name} readOnly={true} />
+        </div>
+        <form className={style.customer_form}>
           <input
             type="text"
-            placeholder="Email"
+            placeholder="Name.."
+            value={name}
+            readOnly={true}
+          />
+          <input
+            type="text"
+            placeholder="Email.."
             value={email}
             readOnly={true}
           />
           <input
             type="text"
-            placeholder="Phone"
+            placeholder="Phone Number.."
             value={phone}
             readOnly={true}
           />
-          <input type="text" placeholder="RNC" value={RNC} readOnly={true} />
-          <input type="text" placeholder="DNI" value={DNI} readOnly={true} />
+          <input type="text" placeholder="RNC.." value={RNC} readOnly={true} />
+          <input type="text" placeholder="DNI.." value={DNI} readOnly={true} />
         </form>
         <button className={style.btn} onClick={OnDelete}>
           <CiTrash size={20} /> Delete
         </button>
       </div>
       <div className={style.product_container}>
-        <input
-          type="text"
-          placeholder="Product search..."
-          onChange={handleFindProductChange}
-          className={style.product_search}
-        />
+        <div className={style.search_tax_section}>
+          <input
+            type="text"
+            placeholder="Product search..."
+            onChange={handleFindProductChange}
+            className={style.product_search}
+          />
+          <select className={style.select_tax_combo}>
+            {tax.map((t) => (
+              <option value={t.value} key={t.id}>
+                {t.value}
+              </option>
+            ))}
+          </select>
+        </div>
         {edittingProducts ? (
           <>
             <form className={style.product_form}>
@@ -288,6 +314,7 @@ export const Sales = () => {
                 }
               />
               <input
+                className={style.input_description}
                 type="text"
                 placeholder="Description"
                 value={edittingProducts.description}
@@ -330,21 +357,15 @@ export const Sales = () => {
             </form>
             <div className={tablestyle.button_wrapper}>
               <button className={style.btn_clean} onClick={onClear}>
-                <MdOutlineCleaningServices size={20} />
+                <LuEraser size={20} />
                 Clear
               </button>
               <button
                 className={style.btn_add}
                 type="submit"
-                onClick={() =>
-                  AddEditedProduct(edittingProducts, {
-                    editQuantity,
-                    editSubtotal,
-                    editTotal,
-                  })
-                }
+                onClick={() => AddEditedProduct(edittingProducts)}
               >
-                <MdAddShoppingCart size={20} />
+                <FaPlus size={20} />
                 Add to cart
               </button>
             </div>
@@ -391,7 +412,7 @@ export const Sales = () => {
             </form>
             <div className={tablestyle.button_wrapper}>
               <button className={style.btn_clean} onClick={onClear}>
-                <MdOutlineCleaningServices size={20} />
+                <LuEraser size={20} />
                 Clear
               </button>
               <button
@@ -408,7 +429,7 @@ export const Sales = () => {
                   })
                 }
               >
-                <MdAddShoppingCart size={20} />
+                <FaPlus size={18} scale={20} />
                 Add to cart
               </button>
             </div>
@@ -440,12 +461,18 @@ export const Sales = () => {
                 />
               ))}
             </tbody>
-            <tfoot className={tablestyle.thead_grey}>
-              <tr>
-                <td colSpan={7}>TOTAL:{DollarFormat.format(globalTotal)}</td>
-              </tr>
-            </tfoot>
           </table>
+        </div>
+      </div>
+      <div className={style.footer_wrapper}>
+        <div>
+          <p className={style.shopping_car}>
+            <CiShoppingCart size={25} />
+            {products.length}
+          </p>
+        </div>
+        <div className={style.total_section}>
+          <p>TOTAL: {DollarFormat.format(globalTotal)}</p>
         </div>
       </div>
     </>

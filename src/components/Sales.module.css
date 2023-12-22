@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@600&display=swap');
+
 .container {
     background: #EAEDED;
     padding: 20px;
@@ -14,6 +16,11 @@
     gap: 5px;
     justify-content: space-evenly;
 
+}
+
+.customer_header_section {
+    display: flex;
+    gap: 5px;
 }
 
 .custoemr_label {
@@ -33,6 +40,7 @@
     width: 200px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
+    color: #1C2833;
     background-color: #EAECEE;
 }
 
@@ -43,13 +51,15 @@
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center;
-    width: 200px;
+    justify-content: start;
+    width: 150px;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
     border: none;
     transition: all 0s ease;
+    gap: 2px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn:hover {
@@ -92,12 +102,14 @@
     border-radius: 5px;
     outline: none;
     margin: 5px 0;
-    width: 200px;
+    width: 150px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     cursor: pointer;
     transition: all 0s ease;
+    gap: 2px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn_add:hover {
@@ -114,11 +126,13 @@
     border-radius: 5px;
     outline: none;
     margin: 5px 0;
-    width: 200px;
+    width: 150px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     cursor: pointer;
+    gap: 2px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn_clean:hover {
@@ -140,6 +154,7 @@
     border: none;
     border-radius: 5px;
     padding: 10px 0 10px 5px;
+    margin: 0 0 10px 0;
     font-family: 'Roboto', sans-serif;
     outline: none;
 }
@@ -152,4 +167,62 @@
     width: 250px;
     margin: 0 0 10px 0;
     font-family: 'Roboto', sans-serif;
+}
+
+.search_tax_section {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.select_tax_combo {
+    border: none;
+    border-radius: 5px;
+    margin: 0 0 10px 0;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.total_section {
+    background-color: #EAEDED;
+    width: 200px;
+    padding: 5px 0 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #1E8449;
+}
+
+.shopping_car {
+    background-color: #F7DC6F;
+    width: 50px;
+    padding: 10px 0 10px 0;
+    margin: 2px 0 2px 0;
+    border-radius: 50%;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1E8449;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition: all 1s ease;
+
+}
+
+.shopping_car:hover {
+    transform: translateY(-5px);
+    background-color: #F1C40F;
+    color: #fff;
+}
+
+.footer_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
 }
