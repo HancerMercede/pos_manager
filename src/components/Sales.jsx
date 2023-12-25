@@ -7,6 +7,9 @@ import { useEffect, useState } from "react";
 import { ProducTableDetail } from "./ProducTableDetail";
 import { DollarFormat } from "../utils/DollarFormat";
 import { CiShoppingCart } from "react-icons/ci";
+import { RiSave3Fill } from "react-icons/ri";
+import { LiaFileInvoiceDollarSolid } from "react-icons/lia";
+import Swal from "sweetalert2";
 
 const customers = [
   {
@@ -117,13 +120,33 @@ export const Sales = () => {
 
   const addProduct = (product) => {
     if (product.productId === "" || product.productId === undefined) return;
-    setProducts([...products, product]);
+    setProducts([product, ...products]);
     onClear();
   };
 
   // Remove a product  from the list or better say build a new array with all the items minus the one we are sending.
   const removeProduct = (productId) => {
-    setProducts(products.filter((product) => product.productId !== productId));
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Deleted!",
+          text: "The product has been deleted.",
+          icon: "success",
+        }).then(
+          setProducts(
+            products.filter((product) => product.productId !== productId)
+          )
+        );
+      }
+    });
   };
 
   // Here i took the product to edit it.
@@ -227,6 +250,24 @@ export const Sales = () => {
     setEditTotal(0);
 
     setEdittingProducts(null);
+  };
+
+  const handleSave = (ev) => {
+    ev.preventDefault();
+    Swal.fire({
+      title: "The invoice has been saved!",
+      text: "",
+      icon: "success",
+    }).then(() => setProducts([]));
+  };
+
+  const handleCreate = (ev) => {
+    ev.preventDefault();
+    Swal.fire({
+      title: "The invoice has been created!",
+      text: "",
+      icon: "success",
+    }).then(() => setProducts([]));
   };
 
   // Here i made a sum for all the total, to have a global value.
@@ -474,6 +515,31 @@ export const Sales = () => {
         <div className={style.total_section}>
           <p>TOTAL: {DollarFormat.format(globalTotal)}</p>
         </div>
+      </div>
+      <div className={style.generate_section}>
+        {products.length === 0 ? (
+          <div className={tablestyle.button_wrapper}>
+            <button className={style.btn_generate} disabled={true}>
+              <LiaFileInvoiceDollarSolid size={18} />
+              CREATE
+            </button>
+            <button className={style.btn_primary} disabled={true}>
+              <RiSave3Fill size={18} />
+              SAVE
+            </button>
+          </div>
+        ) : (
+          <div className={tablestyle.button_wrapper}>
+            <button className={style.btn_generate} onClick={handleCreate}>
+              <LiaFileInvoiceDollarSolid size={18} />
+              CREATE INVOICE
+            </button>
+            <button className={style.btn_primary} onClick={handleSave}>
+              <RiSave3Fill size={18} />
+              SAVE
+            </button>
+          </div>
+        )}
       </div>
     </>
   );

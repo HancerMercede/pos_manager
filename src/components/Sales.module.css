@@ -94,6 +94,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
 .btn_add {
     background: linear-gradient(to left, #9ac5e3, #315dd4);
     color: #fff;
@@ -225,4 +226,44 @@
     display: flex;
     justify-content: flex-end;
     gap: 5px;
+}
+
+.generate_section {
+    background: #EAEDED;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+
+.btn_generate {
+    border: none;
+    border-radius: 5px;
+    padding: 15px 8px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    background: linear-gradient(to right, #F1C40F, #e2d5d5);
+    color: #fff;
+    width: 200px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.btn_primary {
+    border: none;
+    border-radius: 5px;
+    padding: 15px 8px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    background: linear-gradient(to left, #9ac5e3, #315dd4);
+    color: #fff;
+    width: 200px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 2px;
 }
