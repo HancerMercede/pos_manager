@@ -94,6 +94,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.input_description {
+    width: 400px;
+}
 
 .btn_add {
     background: linear-gradient(to left, #9ac5e3, #315dd4);
@@ -232,7 +235,10 @@
     background: #EAEDED;
     padding: 20px;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 15px 0;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
 }
 
 
@@ -242,6 +248,7 @@
     padding: 15px 8px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
     outline: none;
     background: linear-gradient(to right, #F1C40F, #e2d5d5);
     color: #fff;
@@ -250,6 +257,11 @@
     display: flex;
     align-items: center;
     gap: 2px;
+    transition: all 0.5s ease;
+}
+
+.btn_generate:hover {
+    background: linear-gradient(to right, #d0a808, #dfd0b0);
 }
 
 .btn_primary {
@@ -258,12 +270,18 @@
     padding: 15px 8px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
     outline: none;
-    background: linear-gradient(to left, #9ac5e3, #315dd4);
+    background: linear-gradient(to left, #82E0AA, #28B463);
     color: #fff;
     width: 200px;
     height: auto;
     display: flex;
     align-items: center;
     gap: 2px;
+    transition: all 0.5s ease;
+}
+
+.btn_primary:hover {
+    background: linear-gradient(to left, #82E0AA, #0d8840);
 }

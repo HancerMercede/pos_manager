@@ -119,34 +119,30 @@ export const Sales = () => {
   const [editTotal, setEditTotal] = useState(0);
 
   const addProduct = (product) => {
-    if (product.productId === "" || product.productId === undefined) return;
+    if (
+      product.productId === "" ||
+      product.productId === undefined ||
+      product.quantity <= 0
+    )
+      return;
+    // Here i verify if the product already exists in the array of products
+    const ProductExist = productExistInTheArray(product.productId);
+    if (ProductExist) return;
+
     setProducts([product, ...products]);
     onClear();
   };
 
+  const productExistInTheArray = (productId) => {
+    let ExistProduct = products.some((p) => p.productId === productId);
+    console.log(ExistProduct);
+
+    return ExistProduct;
+  };
+
   // Remove a product  from the list or better say build a new array with all the items minus the one we are sending.
   const removeProduct = (productId) => {
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire({
-          title: "Deleted!",
-          text: "The product has been deleted.",
-          icon: "success",
-        }).then(
-          setProducts(
-            products.filter((product) => product.productId !== productId)
-          )
-        );
-      }
-    });
+    setProducts(products.filter((product) => product.productId !== productId));
   };
 
   // Here i took the product to edit it.
@@ -267,7 +263,10 @@ export const Sales = () => {
       title: "The invoice has been created!",
       text: "",
       icon: "success",
-    }).then(() => setProducts([]));
+    }).then(() => {
+      setProducts([]);
+      products.forEach((product) => console.log({ product }));
+    });
   };
 
   // Here i made a sum for all the total, to have a global value.
@@ -421,6 +420,7 @@ export const Sales = () => {
                 onChange={(ev) => setProductId(ev.target.value)}
               />
               <input
+                className={style.input_description}
                 type="text"
                 placeholder="Description"
                 value={description}
@@ -520,22 +520,22 @@ export const Sales = () => {
         {products.length === 0 ? (
           <div className={tablestyle.button_wrapper}>
             <button className={style.btn_generate} disabled={true}>
-              <LiaFileInvoiceDollarSolid size={18} />
+              <LiaFileInvoiceDollarSolid size={20} />
               CREATE
             </button>
             <button className={style.btn_primary} disabled={true}>
-              <RiSave3Fill size={18} />
+              <RiSave3Fill size={20} />
               SAVE
             </button>
           </div>
         ) : (
           <div className={tablestyle.button_wrapper}>
             <button className={style.btn_generate} onClick={handleCreate}>
-              <LiaFileInvoiceDollarSolid size={18} />
+              <LiaFileInvoiceDollarSolid size={20} />
               CREATE INVOICE
             </button>
             <button className={style.btn_primary} onClick={handleSave}>
-              <RiSave3Fill size={18} />
+              <RiSave3Fill size={20} />
               SAVE
             </button>
           </div>
