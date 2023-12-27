@@ -15,12 +15,12 @@ export const Order = () => {
         <Search />
         <div className={tablestyle.table_container}>
           <table>
-            <thead>
+            <thead className={tablestyle.thead_success_green}>
               <tr>
                 <th className={tablestyle.th}>Customer</th>
                 <th className={tablestyle.th}>Amount</th>
                 <th className={tablestyle.th}>Date</th>
-                <th className={tablestyle.th}></th>
+                <th className={tablestyle.th}>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -41,6 +41,13 @@ export const Order = () => {
                 );
               })}
             </tbody>
+            <tfoot className={tablestyle.tfoot_success_green}>
+              <tr>
+                <td colSpan={7}>
+                  <p>Records: {data.length}</p>
+                </td>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </div>

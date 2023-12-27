@@ -2,6 +2,7 @@ import data from "../data/data.json";
 import style from "./Customer.module.css";
 import { CustomerTableDetails } from "./CustomerTableDetails";
 import { Search } from "./Search";
+import tablestyle from "../CustomStyles/table.module.css";
 
 export const Customer = () => {
   return (
@@ -11,15 +12,15 @@ export const Customer = () => {
           <h1>Customer</h1>
         </div>
         <Search />
-        <div className={style.table_container}>
+        <div className={tablestyle.table_container}>
           <table>
-            <thead>
+            <thead className={tablestyle.thead_success_green}>
               <tr>
-                <th className={style.th}>Name</th>
-                <th className={style.th}>Email</th>
-                <th className={style.th}>Address</th>
-                <th className={style.th}>Phone</th>
-                <th className={style.th}></th>
+                <th className={tablestyle.th}>Name</th>
+                <th className={tablestyle.th}>Email</th>
+                <th className={tablestyle.th}>Address</th>
+                <th className={tablestyle.th}>Phone</th>
+                <th className={tablestyle.th}>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -29,6 +30,13 @@ export const Customer = () => {
                 );
               })}
             </tbody>
+            <tfoot className={tablestyle.tfoot_success_green}>
+              <tr>
+                <td colSpan={7}>
+                  <p>Records: {data.length}</p>
+                </td>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </div>

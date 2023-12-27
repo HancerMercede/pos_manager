@@ -23,7 +23,7 @@
 }
 
 .main_title {
-    background: #F2D7D5;
+    background: #A3E4D7;
     width: 180px;
     text-align: center;
     border-radius: 10px;
@@ -191,7 +191,7 @@
 }
 
 .finance_title {
-    background: #F2D7D5;
+    background: #A3E4D7;
     width: 180px;
     text-align: center;
     border-radius: 10px;
@@ -210,7 +210,7 @@ table {
 }
 
 thead {
-    background: #B03A2E;
+    background: #59c2c2;
     border-radius: 5px;
 
 }
@@ -231,7 +231,7 @@ tbody {
 }
 
 .tr:hover {
-    background: #F2D7D5;
+    background: #C0FCFC;
 }
 
 .tr:nth-child(even) {
@@ -239,16 +239,22 @@ tbody {
 }
 
 .tr:nth-child(even):hover {
-    background: #F2D7D5;
+    background: #C0FCFC;
 }
 
 tfoot {
     font-weight: 600;
     font-family: 'Courier New', Courier, monospace;
-    background: #B03A2E;
+    background: #59c2c2;
     color: #fff;
 }
 
 tfoot td {
     padding: 10px;
+}
+
+.logo {
+    width: 145px;
+    height: 125px;
+    border-radius: 50%;
 }

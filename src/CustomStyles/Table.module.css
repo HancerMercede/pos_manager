@@ -28,19 +28,26 @@ tbody {
 }
 
 .tr:hover {
-    background: #F2D7D5;
+    background: #C0FCFC;
 }
+
 
 .tr:nth-child(even) {
     background: #F2F3F4;
 }
 
 .tr:nth-child(even):hover {
-    background: #F2D7D5;
+    background: #C0FCFC;
 }
 
 tfoot {
     background: #B03A2E;
+    font-weight: bold;
+    color: #fff;
+}
+
+.tfoot_success_green {
+    background: #59c2c2;
     font-weight: bold;
     color: #fff;
 }
@@ -56,6 +63,10 @@ tfoot td {
 
 .thead_primary {
     background: #3498DB;
+}
+
+.thead_success_green {
+    background: #59c2c2;
 }
 
 .button_primary {

@@ -125,9 +125,17 @@ export const Sales = () => {
       product.quantity <= 0
     )
       return;
+
     // Here i verify if the product already exists in the array of products
     const ProductExist = productExistInTheArray(product.productId);
-    if (ProductExist) return;
+    if (ProductExist) {
+      Swal.fire({
+        title: "Product already exists!!",
+        text: "Please edit the product.",
+        icon: "warning",
+      });
+      return;
+    }
 
     setProducts([product, ...products]);
     onClear();
@@ -135,7 +143,6 @@ export const Sales = () => {
 
   const productExistInTheArray = (productId) => {
     let ExistProduct = products.some((p) => p.productId === productId);
-    console.log(ExistProduct);
 
     return ExistProduct;
   };
@@ -381,6 +388,7 @@ export const Sales = () => {
                 placeholder="Quantity"
                 value={editQuantity}
                 onChange={handleEditChange}
+                min={0}
               />
               <input
                 type="number"
@@ -437,6 +445,7 @@ export const Sales = () => {
                 placeholder="Quantity"
                 value={quantity}
                 onChange={handleChange}
+                min={0}
               />
               <input
                 type="number"

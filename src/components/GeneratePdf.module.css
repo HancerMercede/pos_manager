@@ -1,0 +1,64 @@
+/* .invoice_tittle {
+    background-color: #7DCEA0;
+    padding: 10px 5px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.invoice_number_date_section {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #F2F3F4
+}
+
+
+.product_header_section {
+    background-color: #FBFCFC;
+    padding: 10px 15px;
+    color: #212F3D;
+}
+
+.customer_header_section {
+    background-color: #FBFCFC;
+    padding: 10px 15px;
+    color: #212F3D;
+}
+
+.customer_Details_container {
+    display: flex;
+    flex-direction: column;
+    background-color: #EAFAF1;
+    width: 100%;
+    margin: 0;
+    padding: 20px 15px;
+    color: #212F3D;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: transparent;
+    width: 100%;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    color: grey;
+}
+
+.image_wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.logo {
+    width: 280px;
+    height: 250px;
+    border-radius: 50%;
+} */

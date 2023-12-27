@@ -15,7 +15,7 @@ export const Product = () => {
         <Search />
         <div className={tablestyle.table_container}>
           <table>
-            <thead>
+            <thead className={tablestyle.thead_success_green}>
               <tr>
                 <th className={tablestyle.th}>Name</th>
                 <th className={tablestyle.th}>Description</th>
@@ -43,6 +43,13 @@ export const Product = () => {
                 );
               })}
             </tbody>
+            <tfoot className={tablestyle.tfoot_success_green}>
+              <tr>
+                <td colSpan={7}>
+                  <p>Records: {products.length}</p>
+                </td>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </div>

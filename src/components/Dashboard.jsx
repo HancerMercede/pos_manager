@@ -17,7 +17,7 @@ export const Dashboard = () => {
   return (
     <>
       <div className={style.main_content_dashboard}>
-        <p className={style.dashboard_title}>Dashboard</p>
+        <p className={style.dashboard_title}>Main dashboard</p>
         <div className={style.date_container}>
           <Clock />
         </div>
