@@ -8,7 +8,6 @@
     align-items: center;
 }
 
-
 .card_container {
     background: #EAEDED;
     padding: 2rem;
@@ -244,7 +243,6 @@ tbody {
 
 tfoot {
     font-weight: 600;
-    font-family: 'Courier New', Courier, monospace;
     background: #59c2c2;
     color: #fff;
 }

@@ -251,7 +251,6 @@ export const Sales = () => {
     setEditquantity(0);
     setEditSubtotal(0);
     setEditTotal(0);
-
     setEdittingProducts(null);
   };
 
@@ -541,7 +540,7 @@ export const Sales = () => {
           <div className={tablestyle.button_wrapper}>
             <button className={style.btn_generate} onClick={handleCreate}>
               <LiaFileInvoiceDollarSolid size={20} />
-              CREATE INVOICE
+              CREATE
             </button>
             <button className={style.btn_primary} onClick={handleSave}>
               <RiSave3Fill size={20} />

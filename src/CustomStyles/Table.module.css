@@ -54,7 +54,7 @@ tfoot {
 
 tfoot td {
     padding: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
 
 .thead_grey {
