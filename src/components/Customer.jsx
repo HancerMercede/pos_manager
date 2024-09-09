@@ -20,7 +20,7 @@ export const Customer = () => {
                 <th className={tablestyle.th}>Email</th>
                 <th className={tablestyle.th}>Address</th>
                 <th className={tablestyle.th}>Phone</th>
-                <th className={tablestyle.th}>Actions</th>
+                <th className={tablestyle.th_actions}>Actions</th>
               </tr>
             </thead>
             <tbody>

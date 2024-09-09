@@ -15,7 +15,7 @@ export const Order = () => {
         <Search />
         <div className={tablestyle.table_container}>
           <table>
-            <thead className={tablestyle.thead_success_green}>
+            <thead className={tablestyle.table_background_color}>
               <tr>
                 <th className={tablestyle.th}>Customer</th>
                 <th className={tablestyle.th}>Amount</th>
@@ -41,7 +41,7 @@ export const Order = () => {
                 );
               })}
             </tbody>
-            <tfoot className={tablestyle.tfoot_success_green}>
+            <tfoot className={tablestyle.table_background_color}>
               <tr>
                 <td colSpan={7}>
                   <p>Records: {data.length}</p>

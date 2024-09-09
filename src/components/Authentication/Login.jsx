@@ -1,8 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import style from "./Login.module.css";
 import { CiLogin } from "react-icons/ci";
 
 export const Login = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log(e.target.value);
+    <Navigate to="/" replace={true} />;
+  };
   return (
     <div className={style.main_container}>
       <div className={style.container}>
@@ -27,7 +32,7 @@ export const Login = () => {
             placeholder="password"
           />
           <div className={style.button_wrapper}>
-            <button className={style.submit}>
+            <button className={style.submit} onClick={handleClick}>
               <CiLogin size={14} /> ENVIAR
             </button>
             <Link className={style.link} to={"/Register"}>

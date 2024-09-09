@@ -2,6 +2,8 @@
 
 .table_container {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 table {
@@ -22,6 +24,14 @@ thead {
     font-size: 1.5rem;
 }
 
+.th_actions {
+    color: #fff;
+    padding: 10px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
 tbody {
     background: #FDFEFE;
 }
@@ -33,7 +43,7 @@ tbody {
 }
 
 .tr:hover {
-    background: #C0FCFC;
+    background: #f2f4f4;
 }
 
 
@@ -42,7 +52,7 @@ tbody {
 }
 
 .tr:nth-child(even):hover {
-    background: #C0FCFC;
+    background: #F2F3F4;
 }
 
 tfoot {
@@ -134,6 +144,14 @@ tfoot td {
 .button_wrapper {
     display: flex;
     justify-content: start;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+}
+
+.button_wrapper_table {
+    display: flex;
+    justify-content: center;
     padding: 0;
     margin: 0;
     gap: 5px;

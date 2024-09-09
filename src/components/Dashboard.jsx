@@ -4,6 +4,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { FaUsers } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
 import style from "./Dashboard.module.css";
+import tablestyle from "../CustomStyles/Table.module.css";
 import data from "../data/finance.json";
 
 import { DollarFormat } from "../utils/DollarFormat";
@@ -84,35 +85,37 @@ export const Dashboard = () => {
       </div>
       <div className={style.finance_container}>
         <h3 className={style.finance_title}>Finance Information</h3>
-        <div className={style.table_container}>
+        <div className={tablestyle.table_container}>
           <table>
-            <thead>
+            <thead className={tablestyle.table_background_color}>
               <tr>
-                <th className={style.th}>Date</th>
-                <th className={style.th}>Trasaction Type</th>
-                <th className={style.th}>Description</th>
-                <th className={style.th}>Category</th>
-                <th className={style.th}>Status</th>
-                <th className={style.th}>Total</th>
+                <th className={tablestyle.th}>Date</th>
+                <th className={tablestyle.th}>Trasaction Type</th>
+                <th className={tablestyle.th}>Description</th>
+                <th className={tablestyle.th}>Category</th>
+                <th className={tablestyle.th}>Status</th>
+                <th className={tablestyle.th}>Total</th>
               </tr>
             </thead>
             <tbody>
               {data.map((item) => {
                 return (
-                  <tr key={item.id} className={style.tr}>
-                    <td className={style.td}>{item.date}</td>
-                    <td className={style.td}>{item["Transaction Type"]}</td>
-                    <td className={style.td}>{item.Description}</td>
-                    <td className={style.td}>{item.Category}</td>
-                    <td className={style.td}>{item.Status}</td>
-                    <td className={style.td}>
+                  <tr key={item.id} className={tablestyle.tr}>
+                    <td className={tablestyle.td}>{item.date}</td>
+                    <td className={tablestyle.td}>
+                      {item["Transaction Type"]}
+                    </td>
+                    <td className={tablestyle.td}>{item.Description}</td>
+                    <td className={tablestyle.td}>{item.Category}</td>
+                    <td className={tablestyle.td}>{item.Status}</td>
+                    <td className={tablestyle.td}>
                       {DollarFormat.format(item.Total)}
                     </td>
                   </tr>
                 );
               })}
             </tbody>
-            <tfoot>
+            <tfoot className={tablestyle.table_background_color}>
               <tr>
                 <td colSpan={7}>Total:${total}</td>
               </tr>

@@ -2,6 +2,7 @@ import style from "./Sidebar.module.css";
 import { FaUsers } from "react-icons/fa";
 import { FaBasketShopping } from "react-icons/fa6";
 import { FaShoppingCart } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { GiCash } from "react-icons/gi";
 import { VscSettingsGear } from "react-icons/vsc";
 import { IoMdHome } from "react-icons/io";
@@ -15,6 +16,11 @@ export const Sidebar = () => {
   return (
     <>
       <div className={style.sidebar}>
+        <GiHamburgerMenu
+          size={40}
+          className={style.hamburger_menu}
+          visable={false}
+        />
         <header className={style.header}>
           <div className={style.user_section}>
             <img
