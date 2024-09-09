@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 .table_container {
     width: 100%;
 }
@@ -5,16 +7,19 @@
 table {
     width: 100%;
     border-collapse: collapse;
+    font-family: "Inter", sans-serif;
 }
 
 thead {
     background: #B03A2E;
     border-radius: 5px;
+    font-family: "Inter", sans-serif;
 }
 
 .th {
     color: #fff;
     padding: 10px;
+    font-size: 1.5rem;
 }
 
 tbody {
@@ -54,7 +59,8 @@ tfoot {
 
 tfoot td {
     padding: 10px;
-    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
 }
 
 .thead_grey {
@@ -67,6 +73,10 @@ tfoot td {
 
 .thead_success_green {
     background: #59c2c2;
+}
+
+.table_background_color {
+    background: #2e86c1;
 }
 
 .button_primary {

@@ -5,7 +5,7 @@ import { FaUsers } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
 import style from "./Dashboard.module.css";
 import data from "../data/finance.json";
-import { Clock } from "./Clock";
+
 import { DollarFormat } from "../utils/DollarFormat";
 
 export const Dashboard = () => {
@@ -16,12 +16,6 @@ export const Dashboard = () => {
 
   return (
     <>
-      <div className={style.main_content_dashboard}>
-        <p className={style.dashboard_title}>Main dashboard</p>
-        <div className={style.date_container}>
-          <Clock />
-        </div>
-      </div>
       <div className={style.card_container}>
         <p className={style.main_title}>Current information</p>
         <div className={style.card_wrapper}>

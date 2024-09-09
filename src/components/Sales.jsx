@@ -287,7 +287,6 @@ export const Sales = () => {
         <div className={style.customer_header_section}>
           <p className={style.custoemr_label}>Customer information</p>
           <select
-            label="Select a customer"
             value={name}
             defaultValue="select one..."
             onChange={handleComboChange}
@@ -337,7 +336,7 @@ export const Sales = () => {
             onChange={handleFindProductChange}
             className={style.product_search}
           />
-          <select className={style.select_tax_combo}>
+          <select className={style.select_tax_combo} defaultValue={0}>
             {tax.map((t) => (
               <option value={t.value} key={t.id}>
                 {t.value}

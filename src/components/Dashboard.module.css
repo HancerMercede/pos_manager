@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 .main_content_dashboard {
     background-color: #EAEDED;
-    border-radius: 10px;
-    padding: 15px 15px;
-    margin-top: 15px;
+    padding: 1.9rem;
+    margin-left: 14%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 86%;
 }
 
 .card_container {
@@ -19,6 +21,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: space-between;
 }
 
 .main_title {
@@ -32,8 +35,9 @@
 
 .dashboard_title {
     color: #2C3E50;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
+    font-family: "Inter", sans-serif;
 }
 
 .card_header {
@@ -154,11 +158,14 @@
 }
 
 .date_container {
-    background: #A3E4D7;
-    padding: 5px 10px;
+    background: linear-gradient(to bottom, #34495e, #2e86c1);
+    padding: 0.5rem 1rem;
     border-radius: 10px;
-    color: #212F3D;
+    color: #ffffff;
+    font-size: 1.2rem;
 }
+
+
 
 .light_yellow {
     background-color: #F1C40F;
@@ -255,4 +262,10 @@ tfoot td {
     width: 145px;
     height: 125px;
     border-radius: 50%;
+}
+
+@media screen and (max-width: 700px) {
+    .main_content_dashboard {
+        display: none;
+    }
 }

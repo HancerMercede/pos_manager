@@ -5,7 +5,10 @@
     align-items: center;
     place-items: center;
     flex-wrap: wrap;
+    margin-left: -250px;
 }
+
+
 
 .container {
     background-color: #59c2c2;

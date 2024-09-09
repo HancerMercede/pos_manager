@@ -1,8 +1,9 @@
-import { Home } from "./Pages/Home.jsx";
+import { GlobalRouter } from "./Routes/GlobalRouter.jsx";
+
 function App() {
   return (
     <>
-      <Home />
+      <GlobalRouter />
     </>
   );
 }
