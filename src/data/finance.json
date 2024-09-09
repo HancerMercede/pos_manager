@@ -1,0 +1,42 @@
+[
+    {
+        "id":"540b8846-f0b7-446f-a653-efb1081f1a1e",
+        "date":"12/12/2023",
+        "Transaction Type":"Credit",
+        "Description":"Computer and Mouse",
+        "Category":	"Techonology",
+        "Status":"Proceed"	,"Total": 1500.00
+      },
+      {
+        "id":"ac36277e-63e1-4d69-9a0c-550afed75e4c",
+        "date":"12/12/2023",
+        "Transaction Type":"Credit",
+        "Description":"Mouse and Keyboard",
+        "Category":	"Techonology",
+        "Status":"Proceed"	,"Total": 800.00
+      }
+      ,  {
+        "id":"dfdf7605-0e9e-42ac-90fc-55257505ca38",
+        "date":"12/12/2023",
+        "Transaction Type":"Credit",
+        "Description":"Gaming Monitor",
+        "Category":	"Techonology",
+        "Status":"Pending Approval"	,"Total": 2500.00
+      }
+      ,  {
+        "id":"80613bc4-8462-4a62-bf9f-273781e49e2b",
+        "date":"12/12/2023",
+        "Transaction Type":"Debit",
+        "Description":"Gaming Laptop",
+        "Category":	"Techonology",
+        "Status":"Pending Approval"	,"Total": 3500.00
+      },
+      {
+        "id":"80613bc4-8462-4a62-bf9f-272781e49e4r",
+        "date":"12/12/2023",
+        "Transaction Type":"Credit",
+        "Description":"Memory Ram",
+        "Category":	"Techonology",
+        "Status":"Pending Approval"	,"Total": 2000.00
+      }
+]

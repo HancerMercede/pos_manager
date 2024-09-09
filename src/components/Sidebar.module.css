@@ -1,88 +1,132 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 .sidebar {
-    background-color: #EAEDED;
+    background: linear-gradient(to bottom, #34495e, #2e86c1);
     left: 0;
     position: fixed;
-    height: 100vh;
+    height: 100%;
     top: 0;
     color: #ffff;
     margin: 0;
     padding: 0;
-    width: 250px;
+    width: 14%;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
     z-index: 1;
 }
 
+.hamburger_menu {
+    display: none;
+}
+
 .header img {
     border-radius: 50%;
+    transition: all 1s ease-in-out;
+
+}
+
+.header img:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
 }
 
 .header {
-    display: flex;
-    padding: 15px;
-    align-items: center;
-    gap: 8px;
-    background-color: brown;
+    text-align: center;
+    margin: 0;
+    font-weight: 900;
+    font-size: 1.5rem;
+    padding: 1.5rem;
 }
 
-.sidebar a {
+.user_section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 2rem;
+}
+
+.linksection {
+    padding: 8px;
+}
+
+.linksection a {
     display: flex;
     align-items: center;
     gap: 5px;
-    height: 100%;
-    width: 100%;
-    padding: 15px;
+    padding: 1rem;
     box-sizing: border-box;
-    margin-top: 25px;
-    line-height: 5px;
+    margin-top: 2.5rem;
     list-style: none;
     text-decoration: none;
-    color: #2C3E50;
+    color: rgb(237, 237, 239);
+    font-size: 1.5rem;
 }
 
-.footer {
+.footer a {
     bottom: 0;
     position: absolute;
     width: 100%;
     display: flex;
-    padding: 15px;
+    padding: 1rem;
     gap: 5px;
     align-items: center;
-    color: #2C3E50;
 }
 
+.footer a {
+    color: rgb(237, 237, 239);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
 
-.sidebar a:hover:not(.active) {
-    background-color: #5D6D7E;
-    transition: 1s ease;
+footer a:hover {
+    background-color: #D5D8DC;
+    transition: 0.5s ease;
+    text-transform: uppercase;
     color: white;
 }
 
-
+.linksection a:hover:not(.active) {
+    background-color: #D5D8DC;
+    transition: 0.5s ease;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 5px;
+}
 
 
 @media screen and (max-width: 700px) {
     .sidebar {
-        width: 100vh;
+        width: 100%;
         height: auto;
         position: relative;
     }
 
-    .sidebar a {
+    .linksection {
         float: left;
+        display: flex;
+        justify-content: space-around;
     }
 
     .footer {
         display: none;
     }
+
+    .header {
+        display: none;
+    }
+
+    .linksection a {
+        display: none;
+    }
+
+    .hamburger_menu {
+        display: inline-block;
+    }
 }
 
 @media screen and (max-width: 400px) {
-    .sidebar a {
+    .linksection {
         text-align: center;
         float: none;
-
     }
 }

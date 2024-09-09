@@ -16,5 +16,28 @@
         "Customer":"Hancer Mercede Sánchez",
         "Amount":55000.00,
         "Date":"10-10-2023"
+    },  {
+        "id":4,
+        "Customer":"Christopher Morales",
+        "Amount":5000.00,
+        "Date":"10-7-2023"
+    },
+    {
+        "id":5,
+        "Customer":"Hancer Mercede Sánchez",
+        "Amount":55000.00,
+        "Date":"10-10-2023"
+    },
+    {
+        "id":6,
+        "Customer":"Christopher Morales",
+        "Amount":5000.00,
+        "Date":"10-7-2023"
+    },
+    {
+        "id":7,
+        "Customer":"Hancer Mercede Sánchez",
+        "Amount":55000.00,
+        "Date":"10-10-2023"
     }
 ]

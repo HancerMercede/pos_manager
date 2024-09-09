@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.table_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Inter", sans-serif;
+}
+
+thead {
+    background: #B03A2E;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+}
+
+.th {
+    color: #fff;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.th_actions {
+    color: #fff;
+    padding: 10px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+tbody {
+    background: #FDFEFE;
+}
+
+.td {
+    padding: 10px;
+    font-size: 14px;
+    color: #212F3D;
+}
+
+.tr:hover {
+    background: #f2f4f4;
+}
+
+
+.tr:nth-child(even) {
+    background: #F2F3F4;
+}
+
+.tr:nth-child(even):hover {
+    background: #F2F3F4;
+}
+
+tfoot {
+    background: #B03A2E;
+    font-weight: bold;
+    color: #fff;
+}
+
+.tfoot_success_green {
+    background: #59c2c2;
+    font-weight: bold;
+    color: #fff;
+}
+
+tfoot td {
+    padding: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+}
+
+.thead_grey {
+    background: #AEB6BF;
+}
+
+.thead_primary {
+    background: #3498DB;
+}
+
+.thead_success_green {
+    background: #59c2c2;
+}
+
+.table_background_color {
+    background: #2e86c1;
+}
+
+.button_primary {
+    color: #fff;
+    background: #3498DB;
+    padding: 8px 12px;
+    border: 1px solid #3498DB;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+}
+
+.button_primary:hover {
+    background: #1E5BD6;
+}
+
+.button_danger {
+    color: #fff;
+    background: #EC7063;
+    padding: 8px 12px;
+    border: 1px solid #EC7063;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+}
+
+.button_danger:hover {
+    background: #C0392B;
+}
+
+.button_warning {
+    color: #fff;
+    background: #F4D03F;
+    padding: 8px 12px;
+    border: 1px solid #F4D03F;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+}
+
+.button_success {
+    color: #fff;
+    background: #52BE80;
+    padding: 8px 12px;
+    border: 1px solid #52BE80;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+}
+
+.button_success:hover {
+    background: #229954;
+}
+
+.button_wrapper {
+    display: flex;
+    justify-content: start;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+}
+
+.button_wrapper_table {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+}

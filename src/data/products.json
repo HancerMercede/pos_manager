@@ -52,6 +52,13 @@
      "description":"Gaming keyboard",
      "Price":800.00,
      "cuantity":5
+  },  
+  {
+    "id": 1,
+     "Name":"Vengance",
+     "description":"Memory Ram Coarsir Vengance",
+     "Price":2000.00,
+     "cuantity":5
   }  
 ]
 

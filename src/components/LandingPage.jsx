@@ -1,7 +1,5 @@
+import { Dashboard } from "./Dashboard";
+
 export const LandingPage = () => {
-  return (
-    <div>
-      <p>LandingPage</p>
-    </div>
-  );
+  return <Dashboard />;
 };

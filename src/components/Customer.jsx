@@ -1,8 +1,8 @@
 import data from "../data/data.json";
 import style from "./Customer.module.css";
+import { CustomerTableDetails } from "./CustomerTableDetails";
 import { Search } from "./Search";
-// import { FaTrashAlt } from "react-icons/fa";
-import { LuClipboardEdit } from "react-icons/lu";
+import tablestyle from "../CustomStyles/table.module.css";
 
 export const Customer = () => {
   return (
@@ -12,34 +12,33 @@ export const Customer = () => {
           <h1>Customer</h1>
         </div>
         <Search />
-        <table className="table is-fullwidth is-hoverable is-bordered">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Address</th>
-              <th>Phone</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((item) => {
-              return (
-                <tr key={item.id}>
-                  <td>{item.Name}</td>
-                  <td>{item.Email}</td>
-                  <td>{item.address}</td>
-                  <td>{item.Phone}</td>
-                  <td className="has-text-centered">
-                    <button className="button is-info is-small">
-                      <LuClipboardEdit size={15} />
-                    </button>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        <div className={tablestyle.table_container}>
+          <table>
+            <thead className={tablestyle.table_background_color}>
+              <tr>
+                <th className={tablestyle.th}>Name</th>
+                <th className={tablestyle.th}>Email</th>
+                <th className={tablestyle.th}>Address</th>
+                <th className={tablestyle.th}>Phone</th>
+                <th className={tablestyle.th_actions}>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((customer) => {
+                return (
+                  <CustomerTableDetails key={customer.id} customer={customer} />
+                );
+              })}
+            </tbody>
+            <tfoot className={tablestyle.table_background_color}>
+              <tr>
+                <td colSpan={7}>
+                  <p>Records: {data.length}</p>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
       </div>
     </>
   );
