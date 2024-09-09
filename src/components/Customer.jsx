@@ -9,7 +9,7 @@ export const Customer = () => {
     <>
       <div className={style.container}>
         <div className={style.title}>
-          <h1>Customer</h1>
+          <h1>Customers</h1>
         </div>
         <Search />
         <div className={tablestyle.table_container}>

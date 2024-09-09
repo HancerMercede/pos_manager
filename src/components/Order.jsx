@@ -1,4 +1,6 @@
 import { LuClipboardEdit } from "react-icons/lu";
+import { CiTrash } from "react-icons/ci";
+import { BiDetail } from "react-icons/bi";
 import data from "../data/orders.json";
 import style from "./Order.module.css";
 import { Search } from "./Search";
@@ -20,7 +22,7 @@ export const Order = () => {
                 <th className={tablestyle.th}>Customer</th>
                 <th className={tablestyle.th}>Amount</th>
                 <th className={tablestyle.th}>Date</th>
-                <th className={tablestyle.th}>Actions</th>
+                <th className={tablestyle.th_actions}>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -33,9 +35,23 @@ export const Order = () => {
                     </td>
                     <td className={tablestyle.td}>{item.Date}</td>
                     <td className={tablestyle.td}>
-                      <button className={tablestyle.button_primary}>
-                        <LuClipboardEdit size={15} />
-                      </button>
+                      <div className={tablestyle.button_wrapper_table}>
+                        <button className={tablestyle.button_primary}>
+                          <LuClipboardEdit size={15} />
+                        </button>
+                        <button
+                          className={tablestyle.button_danger}
+                          title="Delete"
+                        >
+                          <CiTrash size={15} />
+                        </button>
+                        <button
+                          className={tablestyle.button_success}
+                          title="Details"
+                        >
+                          <BiDetail size={15} />
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 );

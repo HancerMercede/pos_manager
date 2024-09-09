@@ -13,7 +13,6 @@
 .card_container {
     background: #EAEDED;
     padding: 2rem;
-    border-radius: 10px;
     margin: 10px 0;
 }
 
@@ -195,7 +194,7 @@
 .finance_container {
     background: #EAEDED;
     padding: 2rem;
-    border-radius: 10px;
+
     margin: 10px 0;
 }
 
