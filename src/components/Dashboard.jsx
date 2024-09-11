@@ -24,7 +24,7 @@ export const Dashboard = () => {
             <div className={style.card_header}>
               <div className={style.amount}>
                 <span className={style.title}>Payments amount </span>
-                <span className={style.amount_value}>$5000.00</span>
+                <span className={style.amount_value}>${total}</span>
               </div>
               <span className={`${style.icon} ${style.light_green}`}>
                 <FaDollarSign />
@@ -37,7 +37,7 @@ export const Dashboard = () => {
             <div className={style.card_header}>
               <div className={style.amount}>
                 <span className={style.title}>Sales amount </span>
-                <span className={style.amount_value}>$5000.00</span>
+                <span className={style.amount_value}>${total}</span>
               </div>
               <span className={`${style.icon} ${style.light_yellow}`}>
                 <FaCartShopping />
@@ -61,7 +61,7 @@ export const Dashboard = () => {
             <div className={style.card_header}>
               <div className={style.amount}>
                 <span className={style.title}>Payment Customer</span>
-                <span className={style.amount_value}>$7500.00</span>
+                <span className={style.amount_value}>${total}</span>
               </div>
               <span className={`${style.icon} ${style.light_blue}`}>
                 <FaUsers />

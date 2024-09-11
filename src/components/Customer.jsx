@@ -3,6 +3,7 @@ import style from "./Customer.module.css";
 import { CustomerTableDetails } from "./CustomerTableDetails";
 import { Search } from "./Search";
 import tablestyle from "../CustomStyles/table.module.css";
+import { Pagination } from "./Pagination";
 
 export const Customer = () => {
   return (
@@ -12,6 +13,7 @@ export const Customer = () => {
           <h1>Customers</h1>
         </div>
         <Search />
+        <Pagination />
         <div className={tablestyle.table_container}>
           <table>
             <thead className={tablestyle.table_background_color}>

@@ -25,14 +25,8 @@ export const Sidebar = () => {
           visable={false}
         />
         <header className={style.header}>
-          <div className={style.user_section}>
-            <img
-              src="./src/images/Avatar.png"
-              alt="profile"
-              width={35}
-              height={35}
-            ></img>
-            <p>{username}</p>
+          <div>
+            <h1>ERP 3000</h1>
           </div>
         </header>
         <div className={style.linksection}>
