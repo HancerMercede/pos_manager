@@ -6,6 +6,7 @@ import { CiTrash } from "react-icons/ci";
 import { BiDetail } from "react-icons/bi";
 import tablestyle from "../CustomStyles/Table.module.css";
 import { DollarFormat } from "../utils/DollarFormat";
+import { Pagination } from "./Pagination";
 
 export const Product = () => {
   return (
@@ -15,6 +16,7 @@ export const Product = () => {
           <h1>Products</h1>
         </div>
         <Search />
+        <Pagination />
         <div className={tablestyle.table_container}>
           <table>
             <thead className={tablestyle.table_background_color}>

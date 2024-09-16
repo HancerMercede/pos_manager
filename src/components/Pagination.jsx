@@ -8,7 +8,6 @@ import { useState } from "react";
 
 export const Pagination = () => {
   const [page, setPage] = useState(1);
-
   const lastPage = 50;
 
   const IncrementPage = () => {
@@ -30,8 +29,12 @@ export const Pagination = () => {
   };
   return (
     <div className={style.wrapper}>
-      <button className={style.button_success} type="button" title="Create">
-        <MdAdd size={20} title="Create" />
+      <button
+        className={`${style.button_success}`}
+        type="button"
+        title="Create"
+      >
+        <MdAdd size={15} title="Create" />
       </button>
       <button
         className={style.button_primary}
@@ -39,7 +42,7 @@ export const Pagination = () => {
         type="button"
         title="First Page"
       >
-        <GrChapterPrevious size={20} />
+        <GrChapterPrevious size={15} />
       </button>
       <button
         className={style.button_primary}
@@ -47,7 +50,7 @@ export const Pagination = () => {
         type="button"
         title="Previous Page"
       >
-        <GrCaretPrevious size={20} />
+        <GrCaretPrevious size={15} />
       </button>
       <div className={style.pagination_container}>
         <span>Page {page} of 50</span>
@@ -58,7 +61,7 @@ export const Pagination = () => {
         type="button"
         title="Next Page"
       >
-        <GrCaretNext size={20} />
+        <GrCaretNext size={15} />
       </button>
       <button
         className={style.button_primary}
@@ -66,7 +69,7 @@ export const Pagination = () => {
         type="button"
         title="Last Page"
       >
-        <GrChapterNext size={20} />
+        <GrChapterNext size={15} />
       </button>
     </div>
   );

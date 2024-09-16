@@ -10,10 +10,7 @@ import { GiCash } from "react-icons/gi";
 import { VscSettingsGear } from "react-icons/vsc";
 import { IoMdHome } from "react-icons/io";
 import { VscGraph } from "react-icons/vsc";
-import { MdLogout } from "react-icons/md";
 import { Link } from "react-router-dom";
-
-const username = "Hancer Mercedes";
 
 export const Sidebar = () => {
   return (
@@ -71,12 +68,12 @@ export const Sidebar = () => {
             Settings
           </Link>
         </div>
-        <footer className={style.footer}>
+        {/* <footer className={style.footer}>
           <Link to="/">
             <MdLogout size={20} />
             Exit
           </Link>
-        </footer>
+        </footer> */}
       </div>
     </>
   );

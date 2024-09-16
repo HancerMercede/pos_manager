@@ -6,6 +6,7 @@ import style from "./Order.module.css";
 import { Search } from "./Search";
 import tablestyle from "../CustomStyles/Table.module.css";
 import { DollarFormat } from "../utils/DollarFormat";
+import { Pagination } from "./Pagination";
 
 export const Order = () => {
   return (
@@ -15,6 +16,7 @@ export const Order = () => {
           <h1>Orders</h1>
         </div>
         <Search />
+        <Pagination />
         <div className={tablestyle.table_container}>
           <table>
             <thead className={tablestyle.table_background_color}>
